@@ -4,12 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
     <title>French Flash Cards</title>
 </head>
 <body>
+    <div class="container">
 
-    <div>Add Flashcard Form</div>
-    <div>Flashcard Container</div>
+        <h1>French Flashcards</h1>
+        <div id="new-flash-container">
+            <h2>Add Flashcard Form</h2>
+        <form id="new-flash-card">
+            <input type="text" name="name" value="" placeholder="..."/>
+            <input type="submit" name="submit" value="Create Flashcard"/>
+        </form>
+    </div>
+        <div id="tenses-container"></div>
+        <div id="flash-container">
+           <h2>Flashcard Container</h2>
+        </div>
+        <ul id= "flash-cards"></ul>
+
+    </div>
+
+    <script src="src/components/tenses.js"></script>
+    <script src="src/components/app.js"></script>
+    <script src="src/adapters/TensesAdapter.js" ></script>
+    <script src="src/index.js"></script>
     
 </body>
 </html>

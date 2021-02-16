@@ -1,0 +1,10 @@
+body {
+    margin: 0;
+    font-family: monospace;
+}
+
+.container {
+    width: 960px;
+    margin: auto;
+    margin-top: 50px
+}
