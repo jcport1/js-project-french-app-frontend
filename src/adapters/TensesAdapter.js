@@ -11,8 +11,7 @@ class TensesAdapter {
     }
 
     getTenses() {
-
-        return fetch(this.baseUrl).then(res => res.json()
-        )
+        return fetch(this.baseUrl).then(resp => resp.json())
     }
+
 }

@@ -7,19 +7,25 @@ class Tenses {
     }
 
     fetchAndLoadTenses() {
-        this.adapter.getTenses()
-        .then(tenses => {
-            tenses.forEach(tense => this.tenses.push(tense))
+        this.adapter
+        .getTenses()
+        .then(tenses=> {
+            tenses["data"].forEach(tense => this.tenses.push(new Tense(tense)))
+            console.log(this.tenses)
         })
 
-        .then(()=> {
+        .then(() => {
             this.render()
         })
-    }
+        .catch(e => {
+            console.log(e);
+        }) 
+     }
+    
 
-    render(){
+
+    render() { 
         const tensesContainer = document.querySelector("#tenses-container")
-        tensesContainer.innerHTML = "My tenses will go here"
-        
+        tensesContainer.innerHTML = 'my tenses'
     }
-}
+} 
