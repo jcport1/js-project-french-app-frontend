@@ -10,7 +10,7 @@ class Tenses {
         this.adapter
         .getTenses()
         .then(tenses=> {
-            tenses["data"].forEach(tense => this.tenses.push(new Tense(tense)))
+            tenses.forEach(tense => this.tenses.push(new Tense(tense)))
             console.log(this.tenses)
         })
 
