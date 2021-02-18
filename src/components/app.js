@@ -1,6 +1,6 @@
 
 class App {
     constructor() {
-        this.tenses = new Tenses()
+        this.verbs = new Verbs()
     }
 }

@@ -1,14 +1,13 @@
-class Tense {
+class Verb {
     constructor(data) {
         this.id = data.id;
         this.name = data.name;
-        Tense.all.push(this);
+        Verb.all.push(this);
     }
 
-    renderTense(){
+    renderVerb(){
         return `<ul><h3>${this.name}</h3></ul>`
     }
 }
 
-Tense.all = [];
-
+Verb.all = [];
