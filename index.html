@@ -5,16 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles/style.css">
-    <title>French Flash Cards</title>
+    <title>French Flashcards</title>
 </head>
 <body>
     <div class="container">
 
-        <h1>French Flashcards</h1>
+        <h1>French Verbs</h1>
         <div id="new-flash-container">
-            <h2>Add Flashcard Form</h2>
-        <form id="new-flash-card-form">
-            <input type="text" name="name" value="" placeholder="..."/>
+            <h2>Add New Flashcard</h2>
+        <form id="new-flashcard-form">
+            <label for="verb-name">Verb</label>
+            <input type="text" name="name" id="verb-name" value="" placeholder="..."/>
+            <label for="verb-translation">Translation</label>
+            <input type="text" name="name" id="verb-translation" value="" placeholder="..."/><br><br>
+            <label for="verb-je">Je</label>
+            <input type="text" name="name" id="verb-je" value="" placeholder="..."/>
+            <label for="verb-tu">Tu</label>
+            <input type="text" name="name" id="verb-tu" value="" placeholder="..."/>
+            <label for="verb-il">Il/Elle/On</label>
+            <input type="text" name="name" id="verb-il" value="" placeholder="..."/><br><br>
+            <label for="verb-nous">Nous</label>
+            <input type="text" name="name" id="verb-nous" value="" placeholder="..."/>
+            <label for="verb-vous">Vous</label>
+            <input type="text" name="name" id="verb-vous" value="" placeholder="..."/>
+            <label for="verb-ils">Ils/Elles</label>
+            <input type="text" name="name" id="verb-ils" value="" placeholder="..."/>
             <input type="submit" name="submit" value="Create Flashcard"/>
         </form>
     </div>
@@ -22,7 +37,7 @@
          <ul id="tenses">
          </ul>
         <div id="flash-container">
-           <h2>Flashcard Container</h2>
+           <h2>Flashcards</h2>
         </div>
         <ul id= "flash-cards"></ul>
 
