@@ -4,21 +4,21 @@
 //whenever we instantiate adapter it will set a base Url
 //then we'll have the ability to call get Tenses -> which makes fetch request to our base url
 
-class Adapter {
-    constructor() {
-        this.baseUrl = 
-        'http://localhost:3000/verbs'
-    }
+// class Adapter {
+//     constructor() {
+//         this.baseUrl = 
+//         'http://localhost:3000/verbs'
+//     }
 
 
-    getVerbs(){
+//     getVerbs(){
 
-        return fetch(this.baseUrl).then(resp => resp.json())
+//         return fetch(this.baseUrl).then(resp => resp.json())
 
-    }
+//     }
 
-    // getTenses() {
-    //     return fetch(this.baseUrl).then(resp => resp.json())
-    // }
+//     // getTenses() {
+//     //     return fetch(this.baseUrl).then(resp => resp.json())
+//     // }
 
-}
+// }
