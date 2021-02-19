@@ -6,7 +6,7 @@ class Tense {
     }
 
     renderTense(){
-        return `<ul><h3>${this.name}</h3></ul>`
+        return ` <strong>${this.name} |</strong>`
     }
 }
 
