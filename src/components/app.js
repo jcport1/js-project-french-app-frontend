@@ -7,7 +7,14 @@ class App {
             const id = parseInt(e.target.dataset.id);
             const verb = Verb.findById(id);
             document.querySelector('#update').innerHTML = verb.renderUpdateForm();
-        });    
+        });
+        
+        document.querySelector('#new-flashcard-form').addEventListener('submit', e => {
+            e.preventDefault();
+            this.adapter.createVerb();
+            e.target.reset()
+
+        })
 
         document.querySelector('#update').addEventListener('submit', e=> {
             e.preventDefault();

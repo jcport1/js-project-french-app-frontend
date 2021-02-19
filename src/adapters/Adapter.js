@@ -17,6 +17,25 @@ class Adapter {
 
     }
 
+    createVerb(){
+        const verbInfo = {
+            
+            verb: {
+                name: nameInput.value 
+            }
+        }
+
+        console.log(verbInfo)
+        const configObj = {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json"
+            },
+            body: JSON.stringify(verbInfo)
+        }
+    }
+
     updateVerb(id,body) {
 
         return fetch(`http://localhost:3000/verbs/${id}`, {
