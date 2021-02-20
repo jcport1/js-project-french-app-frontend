@@ -1,5 +1,8 @@
 class Verb {
 
+
+    static container = document.getElementById('flash-container')
+
     constructor(data) {
         this.id = data.id;
         this.name = data.name;
@@ -11,11 +14,15 @@ class Verb {
         this.vous = data.vous
         this.ils = data.ils 
 
+        this.element = document.createElement("p")
+        // this.element.dataset["id"] = id 
+        // this.element.id = `item-${id}`
+
         Verb.all.push(this);
     }
 
     renderVerb(){
-       return `
+       this.element.innerHTML = `
         <h2>${this.name}</h2>
         <button data-id=${this.id}>edit</button>
         <h4>${this.translation}</h4>
@@ -26,7 +33,7 @@ class Verb {
         <li>Vous ${this.vous}</li>
         <li>Ils/Elles ${this.ils}</li>
        `
-
+       return this.element 
     }
 
     static findById(id) {
@@ -41,6 +48,10 @@ class Verb {
         <button type='submit'>Save Verb</button>
         </form>
        `;
+    }
+
+    attachToDom(){
+      Verb.container.appendChild(this.renderVerb())
     }
 }
 

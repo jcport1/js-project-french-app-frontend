@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     app.adapter.fetchVerbs().then(json => { 
         json["data"].forEach(verb => {
           const newVerb = new Verb({id: verb.id, ...verb.attributes});
-          document.querySelector('#flash-container').innerHTML += newVerb.renderVerb(); 
+          newVerb.attachToDom()
+        //   document.querySelector('#flash-container').innerHTML += newVerb.renderVerb(); 
         });
     })
 

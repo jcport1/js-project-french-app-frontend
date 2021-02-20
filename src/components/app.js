@@ -2,7 +2,12 @@ class App {
     constructor() {
         this.adapter = new Adapter()
     }
+
+   
     attachEventListeners() {
+
+        const verbInput = document.getElementById('verb-name') 
+
         document.querySelector('#flash-container').addEventListener('click', e => { 
             const id = parseInt(e.target.dataset.id);
             const verb = Verb.findById(id);
@@ -11,8 +16,10 @@ class App {
         
         document.querySelector('#new-flashcard-form').addEventListener('submit', e => {
             e.preventDefault();
-            this.adapter.createVerb();
-            e.target.reset()
+            const name = e.target.querySelector('#verb-name').value
+            const bodyJSON = {name}; 
+            this.adapter.createVerb(bodyJSON)
+            // e.target.reset()
 
         })
 
@@ -22,7 +29,9 @@ class App {
             const verb = Verb.findById(id);
             const name = e.target.querySelector('input').value;
             const bodyJSON = {name};
-            this.adapter.updateVerb(verb.id, bodyJSON).then(updatedVerb => console.log(updatedVerb));
+            this.adapter.updateVerb(verb.id, bodyJSON)
+        
         });
+
     }
 }
