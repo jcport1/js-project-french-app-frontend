@@ -34,6 +34,14 @@ body {
     color: white;
   }  
 
-/* .card {
-
-} */
+  .card {
+    text-align: center;
+    background-color: #4c57af;
+    border: rgb(124, 167, 213) solid 1px;
+    padding: 1rem;
+    width: 15rem;
+    height: 25rem;
+    display: inline-grid;
+    margin: 1rem 2rem;
+    box-shadow: 3px 4px #95e04b
+  }

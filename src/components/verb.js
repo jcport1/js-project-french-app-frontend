@@ -20,6 +20,7 @@ class Verb {
         this.element = document.createElement("p")
         this.element.dataset["id"] = data.id 
         this.element.id = `verb-${data.id}`
+        this.element.classList = 'card'
         this.element.addEventListener("click", this.handleClick) 
 
         Verb.all.push(this);
