@@ -1,9 +1,10 @@
 class App {
     constructor() {
         this.adapter = new Adapter()
+        
     }
 
-    addVerb = false; 
+    addVerb = false;  
 
 
    
@@ -19,13 +20,16 @@ class App {
         
         document.getElementById("new-verb-btn").addEventListener('click', () => {
 
+            console.log("i was clicked")
+
             this.addVerb = !this.addVerb 
 
             if (this.addVerb) { 
-                
-                document.querySelector('#new-flashcard-form').style.display = "block"
-                document.getElementById("new-verb-btn").innerText = "Hide Verb Form"
             
+                document.getElementById("new-flash-container").style.display = "block"
+                document.getElementById("new-verb-btn").innerText = "Hide Verb Form"
+                
+
                 document.querySelector('#new-flashcard-form').addEventListener('submit', e => { 
                     e.preventDefault();
                     const name = e.target.querySelector('#verb-name').value
@@ -41,15 +45,14 @@ class App {
                     this.adapter.createVerb(bodyJSON)
                     e.target.reset()
                 })
-            } else {
+             } else {
 
-                document.querySelector('#new-flashcard-form').style.display = "none"
+                document.getElementById("new-flash-container").style.display = "none";
                 document.getElementById("new-verb-btn").innerText = "Add a Verb"
                 
-
             }
-            })
-        }
+        });
+    }
 
  
 
