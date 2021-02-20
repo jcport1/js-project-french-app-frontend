@@ -3,6 +3,7 @@ class App {
         this.adapter = new Adapter()
     }
 
+
    
     attachEventListeners() {
 
@@ -24,7 +25,8 @@ class App {
             const nous = e.target.querySelector('#verb-nous').value
             const vous = e.target.querySelector('#verb-vous').value
             const ils = e.target.querySelector('#verb-ils').value
-            const bodyJSON = {name, translation, je, tu, il, nous, vous, ils };
+            const tense = e.target.querySelector('#tense-dropdown').value
+            const bodyJSON = {name, translation, je, tu, il, nous, vous, ils, tense };
             this.adapter.createVerb(bodyJSON)
             e.target.reset()
 

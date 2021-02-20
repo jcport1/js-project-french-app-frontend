@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const app = new App();
     app.attachEventListeners();
+    
 
     app.adapter.fetchVerbs().then(json => { 
         json["data"].forEach(verb => {
@@ -15,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         json["data"].forEach(tense =>{ 
             const newTense = new Tense({id: tense.id, ...tense.attributes});
             newTense.attachToDom()
+            newTense.addToDropDown()
             // document.querySelector('#tenses-container').innerHTML += newTense.renderTense(); 
         });
     })

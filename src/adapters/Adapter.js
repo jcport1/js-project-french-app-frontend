@@ -39,7 +39,8 @@ class Adapter {
                     "il": body.tu, 
                     "nous": body.tu,
                     "vous": body.vous,
-                    "ils": body.ils 
+                    "ils": body.ils,
+                    "tense_id": body.tense 
 
                 })
             })

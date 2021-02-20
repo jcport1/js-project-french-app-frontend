@@ -2,6 +2,7 @@ class Tense {
 
     static all = []
     static container = document.getElementById('tenses-container')
+    static dropdown = document.getElementById('tense-dropdown')  
 
     constructor(data) {
         this.id = data.id;
@@ -22,6 +23,13 @@ class Tense {
     attachToDom(){
         Tense.container.appendChild(this.renderTense())
         this.addListeners()
+      }
+
+      addToDropDown(){
+        const option = document.createElement('option')
+        option.value = this.id
+        option.innerText = this.name
+        Tense.dropdown.append(option)
       }
 
       addListeners(){
