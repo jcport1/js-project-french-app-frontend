@@ -17,9 +17,12 @@ class Adapter {
 
     }
 
+    fetchTenses() {
+        return fetch("http://localhost:3000/api/v1/tenses").then(resp => resp.json())
+    }
+
 
     createVerb(body) {
-
 
         return fetch("http://localhost:3000/verbs", {
             
@@ -29,7 +32,15 @@ class Adapter {
                     Accept: 'application/json',
                 },
                 body: JSON.stringify({
-                    "name": body.name 
+                    "name": body.name,
+                    "translation": body.translation,
+                    "je": body.je, 
+                    "tu": body.tu,
+                    "il": body.tu, 
+                    "nous": body.tu,
+                    "vous": body.vous,
+                    "ils": body.ils 
+
                 })
             })
             
@@ -53,8 +64,16 @@ class Adapter {
             }) .then(res => res.json())
     }
 
-    fetchTenses() {
-        return fetch("http://localhost:3000/api/v1/tenses").then(resp => resp.json())
+    deleteVerb(id) {
+
+        return fetch(`http://localhost:3000/verbs/${id}`, {
+            method: 'DELETE',
+            headers: { 
+                'Content-Type': 'application/json',
+                Accept: 'application/json'
+            } 
+        })
+        .then(r => r.json())
     }
 
 }

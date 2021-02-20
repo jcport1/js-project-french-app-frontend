@@ -1,5 +1,6 @@
 class Verb {
 
+    static all = [];
 
     static container = document.getElementById('flash-container')
 
@@ -15,8 +16,9 @@ class Verb {
         this.ils = data.ils 
 
         this.element = document.createElement("p")
-        // this.element.dataset["id"] = id 
-        // this.element.id = `item-${id}`
+        this.element.dataset["id"] = data.id 
+        this.element.id = `verb-${data.id}`
+        this.element.addEventListener("click", this.handleClick) 
 
         Verb.all.push(this);
     }
@@ -24,14 +26,16 @@ class Verb {
     renderVerb(){
        this.element.innerHTML = `
         <h2>${this.name}</h2>
-        <button data-id=${this.id}>edit</button>
         <h4>${this.translation}</h4>
+        <ul>
         <li>Je ${this.je}</li>
         <li>Tu ${this.tu}</li>
         <li>Il/Elle/On ${this.il}</li>
         <li>Nous ${this.nous}</li>
         <li>Vous ${this.vous}</li>
         <li>Ils/Elles ${this.ils}</li>
+        </ul>
+        <button data-id=${this.id}>delete</button><br><br>
        `
        return this.element 
     }
@@ -50,9 +54,23 @@ class Verb {
        `;
     }
 
+    handleClick = (e) => {
+        if (e.target.innerText === "delete"){
+            this.deleteVerb(e)
+        }
+    }
+
+    deleteVerb = (e) => {
+        this.element.remove()
+        new Adapter().deleteVerb(this.id)
+    }
+
+  
+
     attachToDom(){
       Verb.container.appendChild(this.renderVerb())
     }
+
+   
 }
 
-Verb.all = [];
