@@ -14,11 +14,12 @@ document.addEventListener('DOMContentLoaded', () => {
     app.adapter.fetchTenses().then(json => {
         json["data"].forEach(tense =>{ 
             const newTense = new Tense({id: tense.id, ...tense.attributes});
-            document.querySelector('#tenses-container').innerHTML += newTense.renderTense(); 
+            newTense.attachToDom()
+            // document.querySelector('#tenses-container').innerHTML += newTense.renderTense(); 
         });
     })
 
-    
+
 
 
 

@@ -5,6 +5,7 @@ class Verb {
     static container = document.getElementById('flash-container')
 
     constructor(data) {
+
         this.id = data.id;
         this.name = data.name;
         this.translation = data.translation 
@@ -14,6 +15,7 @@ class Verb {
         this.nous = data.nous 
         this.vous = data.vous
         this.ils = data.ils 
+        this.tenseId = data.tense_id 
 
         this.element = document.createElement("p")
         this.element.dataset["id"] = data.id 
@@ -43,6 +45,24 @@ class Verb {
     static findById(id) {
         return this.all.find(verb => verb.id == id); 
        
+    }
+
+    static filterByTense(filteredTense){
+
+
+        if(filteredTense) {
+            for(const verb of Verb.all){
+                if(verb.tenseId === parseInt(filteredTense.id)){
+                    verb.element.style.display = "";
+                } else {
+                    verb.element.style.display = "none";
+             }
+            }
+        } else {
+            for (const verb of Verb.all){
+                verb.element.style.display = ""
+            }
+        }
     }
 
     renderUpdateForm(){
