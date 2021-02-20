@@ -10,6 +10,7 @@ class Tense {
         this.active = false 
 
         this.element = document.createElement('button')
+        this.element.classList = 'button'
         Tense.all.push(this);
     }
 
@@ -17,6 +18,7 @@ class Tense {
 
         this.element.innerText = this.name 
         this.element.id = `tense-${this.id}`
+       
         return this.element
     }
 
