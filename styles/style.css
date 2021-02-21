@@ -3,36 +3,78 @@ body {
     font-family: monospace;
 }
 
+.header {
+    padding: 25px;
+    text-align: center;
+    background: #29353a;
+    color: white;
+    font-size: 20px;
+  }
+
+input[type=text], select {
+    width: auto;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input[type=submit] {
+    width: auto;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+
+
 .container {
     padding: 2rem;
     width: stretch;
     height: auto;
     margin: auto;
     margin-top: 50px;
-    background: #9ea8b3;
-    /* opacity: .9;  */
+    /* background: #9ea8b3; */
+    background:white; 
+    /* opacity: .98;  */
 
 }
 
 .flash-container {
 
-    background: #9ea8b3 
+    /* background: #9ea8b3; */
+    background:white; 
 
 }
 
 .form-container {
+    border-radius: 5px;
     padding: 2rem;
     width: stretch;
     height: auto;
     margin: auto;
     margin-top: 50px;
     background: #495db6;
+    color: white;
+    font-size: 20px;
     /* opacity: .8;  */
 
 }
 
+
+
 .button {
-    background-color: #4c98af; /* Green */
+    background-color:#4c57af; /* Green */
     border: none;
     color: white;
     padding: 15px 32px;
@@ -45,11 +87,47 @@ body {
 .button {
     transition-duration: 0.4s;
   }
-  
+
+
   .button:hover {
-    background-color: #4c57af; /* Green */
+    background-color: #2b40d8; /* Green */
     color: white;
   }  
+
+  .button2 {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+  }
+
+  .button2 {
+    transition-duration: 0.4s;
+  }
+  
+  .button2:hover {
+    background-color: #2b40d8; /* Green */
+    color: white;
+  }
+
+  .deletebtn {
+
+    background-color: gray; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+
+  }
+  
 
  
 
@@ -95,12 +173,12 @@ body {
     position: absolute;
     top: 2rem;
     left: 3rem;
-    width: 10rem;
-    height: 18rem;
+    width: 12rem;
+    height: 20rem;
     border-radius: 10px;
     backface-visibility: hidden;
     overflow: hidden;
-    background: #ffc728;
+    background: #4c57af;
     color: #000;
     transform: rotateY(180deg);
         

@@ -53,7 +53,7 @@ class Verb {
        <h3>Vous ${this.vous}</h3>
        <h3>Ils/Elles ${this.ils}</h3>
        
-       <button data-id=${this.id}>delete</button><br><br>
+       <button data-id=${this.id} class="deletebtn">remove</button><br><br>
        `
        this.card.append(this.front)
        this.card.append(this.back)
