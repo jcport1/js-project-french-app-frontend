@@ -19,17 +19,19 @@ class Verb {
 
         this.card = document.createElement("card")
         this.card.classList = 'card'
+        this.card.dataset["id"] = data.id
+        this.card.id = `verb-${data.id}`
 
         this.front = document.createElement("div")
-        this.front.dataset["id"] = data.id 
-        this.front.id = `verb-${data.id}`
+        // this.front.dataset["id"] = data.id 
+        // this.front.id = `verb-${data.id}`
         this.front.classList = 'front'
         this.back = document.createElement("div")
-        this.back.dataset["id"] = data.id 
-        this.back.id = `verb-${data.id}`
+        // this.back.dataset["id"] = data.id 
+        // this.back.id = `verb-${data.id}`
         this.back.classList = 'back'
 
-        this.front.addEventListener("click", this.handleClick) 
+        this.card.addEventListener("click", this.handleClick) 
 
         Verb.all.push(this);
     }
@@ -52,10 +54,11 @@ class Verb {
        <li>Ils/Elles ${this.ils}</li>
        </ul>
        `
+       this.card.append(this.front)
+       this.card.append(this.back)
 
-       this.card.appendChild(this.front, this.back)
-
-       return this.card  
+       console.log("this is my card", this.card)
+       return this.card 
     
     }
 
@@ -70,14 +73,14 @@ class Verb {
         if(filteredTense) {
             for(const verb of Verb.all){
                 if(verb.tenseId === parseInt(filteredTense.id)){
-                    verb.front.style.display = "";
+                    verb.card.style.display = "";
                 } else {
-                    verb.front.style.display = "none";
+                    verb.card.style.display = "none";
              }
             }
         } else {
             for (const verb of Verb.all){
-                verb.front.style.display = ""
+                verb.card.style.display = ""
             }
         }
     }
@@ -98,13 +101,14 @@ class Verb {
     }
 
     deleteVerb = (e) => {
-        this.element.remove()
+        this.card.remove()
         new Adapter().deleteVerb(this.id)
     }
 
   
 
     attachToDom(){
+       
       Verb.container.appendChild(this.renderVerb())
     }
 
