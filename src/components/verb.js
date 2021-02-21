@@ -41,18 +41,19 @@ class Verb {
        this.front.innerHTML = `
         <h2>${this.name}</h2>
         <h4>${this.translation}</h4>
-        <button data-id=${this.id}>delete</button><br><br>
+        
        `
 
        this.back.innerHTML = `
-       <ul>
-       <li>Je ${this.je}</li>
-       <li>Tu ${this.tu}</li>
-       <li>Il/Elle/On ${this.il}</li>
-       <li>Nous ${this.nous}</li>
-       <li>Vous ${this.vous}</li>
-       <li>Ils/Elles ${this.ils}</li>
-       </ul>
+       
+       <h3>Je ${this.je}</h3>
+       <h3>Tu ${this.tu}</h3>
+       <h3>Il/Elle/On ${this.il}</h3>
+       <h3>Nous ${this.nous}</h3>
+       <h3>Vous ${this.vous}</h3>
+       <h3>Ils/Elles ${this.ils}</h3>
+       
+       <button data-id=${this.id}>delete</button><br><br>
        `
        this.card.append(this.front)
        this.card.append(this.back)

@@ -1,0 +1,96 @@
+.card {
+    text-align: center;
+    background-color: #4c57af;
+    border: rgb(124, 167, 213) solid 1px;
+    padding: 1rem;
+    width: 15rem;
+    height: 25rem;
+    display: inline-grid;
+    margin: 1rem 2rem;
+    box-shadow: 3px 4px #95e04b;
+    transition: all 0.8s ease;
+    transform-style: preserve-3d;  
+} 
+
+.front {
+
+   
+    position: absolute;
+    top: 5rem;
+    left: 1rem;
+    width: 15rem;
+    height: 10rem;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    background: #ffc728;
+    color: #000;
+
+  }
+
+  .back {
+
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  width: 10rem;
+  height: 18rem;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  background: #ffc728;
+  color: #000;
+  transform: rotateY(180deg);
+      
+  }
+
+  /* Part II */
+
+  .card {
+    text-align: center;
+    border: rgb(124, 167, 213) solid 1px;
+    padding: 1rem;
+    width: 15rem;
+    height: 25rem;
+    display: inline-grid;
+    margin: 1rem 2rem;
+    box-shadow: 3px 4px #95e04b;
+    transition: all 0.8s ease;
+    transform-style: preserve-3d;  
+} 
+
+
+
+  .front {
+
+    position: absolute;
+    top: 5rem;
+    left: 1rem;
+    width: 15rem;
+    height: 25rem;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    background: #ffc728;
+    color: #000;
+
+  }
+
+  .back {
+
+  position: absolute;
+  top: 5rem;
+  left: 1rem;
+  width: 15rem;
+  height: 25rem;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  background: #ffc728;
+  color: #000;
+  transform: rotateY(180deg);
+      
+  }
+  
+
+  

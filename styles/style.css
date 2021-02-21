@@ -10,17 +10,23 @@ body {
     margin: auto;
     margin-top: 50px;
     background: #9ea8b3;
-    /* opacity: .8;  */
+    /* opacity: .9;  */
 
 }
 
-.card-container {
+.flash-container {
+
+    background: #9ea8b3 
+
+}
+
+.form-container {
     padding: 2rem;
     width: stretch;
     height: auto;
     margin: auto;
     margin-top: 50px;
-    background: #9ea8b3;
+    background: #495db6;
     /* opacity: .8;  */
 
 }
@@ -45,20 +51,21 @@ body {
     color: white;
   }  
 
+ 
+
   .card {
+    
     text-align: center;
-    background-color: #4c57af;
-    border: rgb(124, 167, 213) solid 1px;
+    border: rgb(82, 148, 218) solid 3px;
     padding: 1rem;
     width: 15rem;
     height: 25rem;
     display: inline-grid;
     margin: 1rem 2rem;
-    box-shadow: 3px 4px #95e04b;
+    box-shadow: 3px 4px  #4c57af;
     transition: all 0.8s ease;
     transform-style: preserve-3d;  
-   
-  }
+} 
 
   .card:hover {
     cursor: pointer;
@@ -66,35 +73,15 @@ body {
   }
 
 
-  /* .card div {
-    width: 100%;
-    height: 100%;
-    position: absolute; 
-  }
 
   .front {
 
-
-    background: blue;
-    color: white;  
-
-  }
-
-  .back {
-
-    background: yellow;
-    color: green; 
-    transform: rotateY(180deg)
-
-  } */
-
-  .front {
-
+   
     position: absolute;
-    top: 0;
-    left: 0;
-    width: auto;
-    height: auto;
+    top: 5rem;
+    left: 1rem;
+    width: 15rem;
+    height: 10rem;
     border-radius: 10px;
     backface-visibility: hidden;
     overflow: hidden;
@@ -105,23 +92,17 @@ body {
 
   .back {
 
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: auto;
-  height: auto;
-  border-radius: 10px;
-  backface-visibility: hidden;
-  overflow: hidden;
-  background: #fafafa;
-  color: #333;
-  text-align: center;
-  transform: rotateY(180deg);
-      
- 
-
-  }
-
-  
-
+    position: absolute;
+    top: 2rem;
+    left: 3rem;
+    width: 10rem;
+    height: 18rem;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    background: #ffc728;
+    color: #000;
+    transform: rotateY(180deg);
+        
+    }
   
