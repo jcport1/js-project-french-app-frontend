@@ -44,4 +44,52 @@ body {
     display: inline-grid;
     margin: 1rem 2rem;
     box-shadow: 3px 4px #95e04b
+    transform-style: preserve-3d;
+    transition: all 0.8s ease; 
   }
+
+  .card:hover {
+    cursor: pointer;
+    transform: rotateY(180deg); 
+  }
+
+  .front {
+
+    position: relative;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    background: #ffc728;
+    color: #000;
+
+ 
+
+
+  }
+
+  .back {
+
+  position: relative;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  background: #fafafa;
+  color: #333;
+  text-align: center;
+  transform: rotateY(180deg);
+      
+ 
+
+  }
+
+  
+
+  

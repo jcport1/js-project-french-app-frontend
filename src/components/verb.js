@@ -17,30 +17,46 @@ class Verb {
         this.ils = data.ils 
         this.tenseId = data.tense_id 
 
-        this.element = document.createElement("p")
-        this.element.dataset["id"] = data.id 
-        this.element.id = `verb-${data.id}`
-        this.element.classList = 'card'
-        this.element.addEventListener("click", this.handleClick) 
+        this.card = document.createElement("card")
+        this.card.classList = 'card'
+
+        this.front = document.createElement("div")
+        this.front.dataset["id"] = data.id 
+        this.front.id = `verb-${data.id}`
+        this.front.classList = 'front'
+        this.back = document.createElement("div")
+        this.back.dataset["id"] = data.id 
+        this.back.id = `verb-${data.id}`
+        this.back.classList = 'back'
+
+        this.front.addEventListener("click", this.handleClick) 
 
         Verb.all.push(this);
     }
 
     renderVerb(){
-       this.element.innerHTML = `
+
+       this.front.innerHTML = `
         <h2>${this.name}</h2>
         <h4>${this.translation}</h4>
-        <ul>
-        <li>Je ${this.je}</li>
-        <li>Tu ${this.tu}</li>
-        <li>Il/Elle/On ${this.il}</li>
-        <li>Nous ${this.nous}</li>
-        <li>Vous ${this.vous}</li>
-        <li>Ils/Elles ${this.ils}</li>
-        </ul>
         <button data-id=${this.id}>delete</button><br><br>
        `
-       return this.element 
+
+       this.back.innerHTML = `
+       <ul>
+       <li>Je ${this.je}</li>
+       <li>Tu ${this.tu}</li>
+       <li>Il/Elle/On ${this.il}</li>
+       <li>Nous ${this.nous}</li>
+       <li>Vous ${this.vous}</li>
+       <li>Ils/Elles ${this.ils}</li>
+       </ul>
+       `
+
+       this.card.appendChild(this.front, this.back)
+
+       return this.card  
+    
     }
 
     static findById(id) {
@@ -54,14 +70,14 @@ class Verb {
         if(filteredTense) {
             for(const verb of Verb.all){
                 if(verb.tenseId === parseInt(filteredTense.id)){
-                    verb.element.style.display = "";
+                    verb.front.style.display = "";
                 } else {
-                    verb.element.style.display = "none";
+                    verb.front.style.display = "none";
              }
             }
         } else {
             for (const verb of Verb.all){
-                verb.element.style.display = ""
+                verb.front.style.display = ""
             }
         }
     }
