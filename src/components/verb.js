@@ -34,7 +34,7 @@ class Verb {
         // this.back.id = `verb-${data.id}`
         this.back.classList = 'back'
 
-        this.card.addEventListener("click", this.handleClick) 
+        this.back.addEventListener("click", this.handleClick) 
 
         Verb.all.push(this);
     }
@@ -108,7 +108,11 @@ class Verb {
     }
 
     handleClick = (e) => {
-        if (e.target.innerText === "delete"){
+
+        console.log("I was clicked")
+    
+
+        if (e.target.innerText === "remove"){
             this.deleteVerb(e)
         }
     }

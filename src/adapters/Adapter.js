@@ -18,7 +18,7 @@ class Adapter {
     }
 
     fetchTenses() {
-        return fetch("http://localhost:3000/api/v1/tenses").then(resp => resp.json())
+        return fetch("http://localhost:3000/tenses").then(resp => resp.json())
     }
 
 
