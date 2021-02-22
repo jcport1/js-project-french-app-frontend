@@ -131,7 +131,7 @@ input[type=text], select {
 
  
 
-  .card {
+  card {
     
     text-align: center;
     border: rgb(82, 148, 218) solid 3px;
@@ -145,9 +145,13 @@ input[type=text], select {
     transform-style: preserve-3d;  
 } 
 
-  .card:hover {
+  card:hover {
     cursor: pointer;
-    transform: rotateY(180deg); 
+    /* transform: rotateY(180deg);  */
+  }
+
+    .flipCard {
+      transform: rotateY(180deg);
   }
 
 
@@ -179,7 +183,7 @@ input[type=text], select {
     backface-visibility: hidden;
     overflow: hidden;
     background: #4c57af;
-    color: #000;
+    color: black;
     transform: rotateY(180deg);
         
     }

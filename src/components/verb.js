@@ -21,6 +21,9 @@ class Verb {
         this.card.classList = 'card'
         this.card.dataset["id"] = data.id
         this.card.id = `verb-${data.id}`
+        this.card.addEventListener("click", ()=>{
+            this.card.classList.toggle('flipCard')
+        })
 
         this.front = document.createElement("div")
         // this.front.dataset["id"] = data.id 
@@ -35,6 +38,15 @@ class Verb {
 
         Verb.all.push(this);
     }
+
+    // flipCard = (e) => {
+
+    //     console.log("I was clicked")
+    //     debugger 
+
+    //         e.target.classList = "flipCard"
+
+    // }
 
     renderVerb(){
 
