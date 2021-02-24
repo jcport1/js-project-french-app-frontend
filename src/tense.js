@@ -8,7 +8,6 @@ class Tense {
         this.id = data.id;
         this.name = data.name;
         this.active = false 
-
         this.element = document.createElement('button')
         this.element.classList = 'button'
         Tense.all.push(this);

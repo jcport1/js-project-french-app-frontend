@@ -6,18 +6,8 @@ class App {
 
     addVerb = false;  
 
-
-   
     attachEventListeners() {
 
-        // const verbInput = document.getElementById('verb-name') 
-
-        // document.querySelector('#flash-container').addEventListener('click', e => { 
-        //     const id = parseInt(e.target.dataset.id);
-        //     const verb = Verb.findById(id);
-        //     document.querySelector('#update').innerHTML = verb.renderUpdateForm();
-        // });
-        
         document.getElementById("new-verb-btn").addEventListener('click', () => {
 
             console.log("i was clicked")
@@ -29,7 +19,6 @@ class App {
                 document.getElementById("new-flash-container").style.display = "block"
                 document.getElementById("new-verb-btn").innerText = "Hide Verb Form"
                 
-
                 document.querySelector('#new-flashcard-form').addEventListener('submit', e => { 
                     e.preventDefault();
                     const name = e.target.querySelector('#verb-name').value
@@ -53,33 +42,9 @@ class App {
             }
         });
 
-        document.getElementById("fave-btn").addEventListener('click', () => {
-            console.log("I was clicked");
-        }) 
+        // document.getElementById("fave-btn").addEventListener('click', () => {
+        //     console.log("I was clicked");
+        // }) 
 
-
-    }
-
-
-      
-
- 
-
-        // document.querySelector('#update').addEventListener('submit', e=> {
-        //     e.preventDefault();
-        //     const id = parseInt(e.target.dataset.id);
-        //     const verb = Verb.findById(id);
-        //     const name = e.target.querySelector('input').value;
-        //     const bodyJSON = {name};
-        //     this.adapter.updateVerb(verb.id, bodyJSON)
-        
-        // });
-
-        // document.querySelector('#flash-container').addEventListener('delete', e=> {
-        //     e.preventDefault();
-        //     debugger 
-        //     const id = parseInt(e.target.dataset.id)
-        //     this.adapter.deleteVerb(id)
-        // })
-
+        }
     } 

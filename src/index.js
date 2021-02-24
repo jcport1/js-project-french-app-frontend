@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
         json["data"].forEach(verb => {
           const newVerb = new Verb({id: verb.id, ...verb.attributes});
           newVerb.attachToDom()
-        //   document.querySelector('#flash-container').innerHTML += newVerb.renderVerb(); 
         });
     })
 
@@ -17,12 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const newTense = new Tense({id: tense.id, ...tense.attributes});
             newTense.attachToDom()
             newTense.addToDropDown()
-            // document.querySelector('#tenses-container').innerHTML += newTense.renderTense(); 
         });
     })
-
-
-
-
 
 });

@@ -24,14 +24,9 @@ class Verb {
         this.card.addEventListener("click", this.flipCard)
 
         this.front = document.createElement("div")
-        // this.front.dataset["id"] = data.id 
-        // this.front.id = `verb-${data.id}`
         this.front.classList = 'front'
         this.back = document.createElement("div")
-        // this.back.dataset["id"] = data.id 
-        // this.back.id = `verb-${data.id}`
         this.back.classList = 'back'
-
         this.back.addEventListener("click", this.handleClick) 
 
         Verb.all.push(this);
@@ -40,7 +35,6 @@ class Verb {
 
     flipCard = () => {
 
-        
         this.card.classList.toggle('flipCard')
 
     }
@@ -112,7 +106,6 @@ class Verb {
     }
 
     attachToDom(){
-       
       Verb.container.appendChild(this.renderVerb())
     }
 }

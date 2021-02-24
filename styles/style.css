@@ -44,20 +44,18 @@ input[type=text], select {
     height: auto;
     margin: auto;
     margin-top: 50px;
-    /* background: #9ea8b3; */
     background:white; 
-    /* opacity: .98;  */
 
 }
 
 .flash-container {
 
-    /* background: #9ea8b3; */
     background:white; 
 
 }
 
 .form-container {
+
     border-radius: 5px;
     padding: 2rem;
     width: stretch;
@@ -67,14 +65,12 @@ input[type=text], select {
     background: #495db6;
     color: white;
     font-size: 20px;
-    /* opacity: .8;  */
-
 }
 
 
 
 .button {
-    background-color:#4c57af; /* Green */
+    background-color:#4c57af; 
     border: none;
     color: white;
     padding: 15px 32px;
@@ -90,12 +86,12 @@ input[type=text], select {
 
 
   .button:hover {
-    background-color: #2b40d8; /* Green */
+    background-color: #2b40d8; 
     color: white;
   }  
 
   .button2 {
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50; 
     border: none;
     color: white;
     padding: 15px 32px;
@@ -111,13 +107,13 @@ input[type=text], select {
   }
   
   .button2:hover {
-    background-color: #2b40d8; /* Green */
+    background-color: #2b40d8; 
     color: white;
   }
 
   .deletebtn {
 
-    background-color: gray; /* Green */
+    background-color: gray; 
     border: none;
     color: white;
     padding: 10px 25px;
@@ -146,8 +142,8 @@ input[type=text], select {
 } 
 
   .card:hover {
+
     cursor: pointer;
-    /* transform: rotateY(180deg);  */
   }
 
   .flipCard{
@@ -158,7 +154,6 @@ input[type=text], select {
 
   .front {
 
-   
     position: absolute;
     top: 5rem;
     left: 1rem;
