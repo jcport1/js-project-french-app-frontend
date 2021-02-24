@@ -1,6 +1,6 @@
 # JavaScript French Flashcards App
 
-User can create verb flashcards in order to study and perfect those tricky French conjugations!
+Users can create verb flashcards in order to study and perfect those tricky French conjugations!
 
 ## Features 
 
