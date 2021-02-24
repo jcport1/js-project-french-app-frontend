@@ -37,14 +37,6 @@ class Verb {
         Verb.all.push(this);
     }
 
-    // flipCard = (e) => {
-
-    //     console.log("I was clicked")
-    //     debugger 
-
-    //         e.target.classList = "flipCard"
-
-    // }
 
     flipCard = () => {
 
@@ -57,21 +49,16 @@ class Verb {
 
        this.front.innerHTML = `
         <h2>${this.name}</h2>
-        <h4>${this.translation}</h4>
-        
-       `
+        <h4>${this.translation}</h4>`
 
        this.back.innerHTML = `
-       
        <h3>Je ${this.je}</h3>
        <h3>Tu ${this.tu}</h3>
        <h3>Il/Elle/On ${this.il}</h3>
        <h3>Nous ${this.nous}</h3>
        <h3>Vous ${this.vous}</h3>
        <h3>Ils/Elles ${this.ils}</h3>
-       
-       <button data-id=${this.id} class="deletebtn">remove</button><br><br>
-       `
+       <button data-id=${this.id} class="deletebtn">remove</button><br><br>`
        this.card.append(this.front)
        this.card.append(this.back)
 
@@ -86,7 +73,6 @@ class Verb {
     }
 
     static filterByTense(filteredTense){
-
 
         if(filteredTense) {
             for(const verb of Verb.all){
@@ -108,15 +94,13 @@ class Verb {
         <form data-id=${this.id}>
         <input type="text" value="${this.name}" />
         <button type='submit'>Save Verb</button>
-        </form>
-       `;
+        </form>`;
     }
 
     handleClick = (e) => {
 
         console.log("I was clicked")
     
-
         if (e.target.innerText === "remove"){
             this.deleteVerb(e)
         }
@@ -127,13 +111,9 @@ class Verb {
         new Adapter().deleteVerb(this.id)
     }
 
-  
-
     attachToDom(){
        
       Verb.container.appendChild(this.renderVerb())
     }
-
-   
 }
 
