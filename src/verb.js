@@ -6,6 +6,7 @@ class Verb {
 
     constructor(data) {
 
+
         this.id = data.id;
         this.name = data.name;
         this.translation = data.translation 
@@ -16,6 +17,7 @@ class Verb {
         this.vous = data.vous
         this.ils = data.ils 
         this.tenseId = data.tense_id 
+        this.tense = data.tense.name
 
         this.card = document.createElement("card")
         this.card.classList = 'card'
@@ -42,8 +44,10 @@ class Verb {
     renderVerb(){
 
        this.front.innerHTML = `
-        <h2>${this.name}</h2>
-        <h4>${this.translation}</h4>`
+       <h3>${this.tense}</h3>
+        <h1>${this.name}</h1>
+        <h3>(${this.translation})</h3>
+        `
 
        this.back.innerHTML = `
        <h3>Je ${this.je}</h3>
