@@ -20,6 +20,8 @@ class Verb {
         this.tense = data.tense.name
 
         this.card = document.createElement("card")
+        // this.faveBtn = document.createElement('button')
+        // this.faveBtn.addEventListener("click", this.setFavoriteVerb)
         this.card.classList = 'card'
         this.card.dataset["id"] = data.id
         this.card.id = `verb-${data.id}`
@@ -27,6 +29,7 @@ class Verb {
 
         this.front = document.createElement("div")
         this.front.classList = 'front'
+        this.front.addEventListener("click", this.handleClick) 
         this.back = document.createElement("div")
         this.back.classList = 'back'
         this.back.addEventListener("click", this.handleClick) 
@@ -35,11 +38,15 @@ class Verb {
     }
 
 
-    flipCard = () => {
+    flipCard = (e) => {
+
+        if (e.target.innerText != "save")
 
         this.card.classList.toggle('flipCard')
 
     }
+
+   
 
     renderVerb(){
 
@@ -48,6 +55,7 @@ class Verb {
         <h1>${this.name}</h1>
         <h3>(${this.translation})</h3>
         `
+        // <button data-id=${this.id} class="favebtn">save</button><br><br></br> add to front face of card
 
        this.back.innerHTML = `
        <h3>Je ${this.je}</h3>
@@ -56,7 +64,8 @@ class Verb {
        <h3>Nous ${this.nous}</h3>
        <h3>Vous ${this.vous}</h3>
        <h3>Ils/Elles ${this.ils}</h3>
-       <button data-id=${this.id} class="deletebtn">remove</button><br><br>`
+       <button data-id=${this.id} class="deletebtn">remove</button><br><br>
+       `
        this.card.append(this.front)
        this.card.append(this.back)
 
@@ -69,6 +78,12 @@ class Verb {
         return this.all.find(verb => verb.id == id); 
        
     }
+
+    // setFavoriteVerb = (e) => {
+ 
+    //     console.log("Fave Btn - I was clicked")
+
+    // }
 
     static filterByTense(filteredTense){
 

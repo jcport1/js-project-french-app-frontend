@@ -111,6 +111,19 @@ input[type=text], select {
     color: white;
   }
 
+  .favebtn {
+
+    background-color: rgb(74, 72, 228); 
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: right;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+
+  }
+
   .deletebtn {
 
     background-color: gray; 
