@@ -42,10 +42,16 @@ class App {
             }
         });
 
-        // document.getElementById("fave-btn").addEventListener('click', () => {
-        //     console.log("I was clicked");
-        // render favorite verbs 
-        // }) 
+        document.getElementById("fave-btn").addEventListener('click', () => {
+
+            const container = document.getElementById('flash-container')
+            container.innerHTML = ''
+            Verb.favorites 
+        
+    
+        }) 
+
+      
 
         }
     } 

@@ -20,6 +20,10 @@ class Adapter {
         return fetch("http://localhost:3000/tenses").then(resp => resp.json())
     }
 
+    // //fetchFavorites() {
+    //     //return fetch("http://localhost:3000/favorites").then(resp => resp.json())
+    // }
+
 
     createVerb(body) {
 

@@ -4,8 +4,10 @@ class Verb {
 
     static container = document.getElementById('flash-container')
 
-    constructor(data) {
+    static favorites = []; 
 
+
+    constructor(data) {
 
         this.id = data.id;
         this.name = data.name;
@@ -54,8 +56,8 @@ class Verb {
        <h3>${this.tense}</h3>
         <h1>${this.name}</h1>
         <h3>(${this.translation})</h3>
+        <button data-id=${this.id} class="favebtn">save</button>
         `
-        // <button data-id=${this.id} class="favebtn">save</button><br><br></br> add to front face of card
 
        this.back.innerHTML = `
        <h3>Je ${this.je}</h3>
@@ -64,7 +66,7 @@ class Verb {
        <h3>Nous ${this.nous}</h3>
        <h3>Vous ${this.vous}</h3>
        <h3>Ils/Elles ${this.ils}</h3>
-       <button data-id=${this.id} class="deletebtn">remove</button><br><br>
+       <button data-id=${this.id} button id="save-btn" class="deletebtn">remove</button><br><br>
        `
        this.card.append(this.front)
        this.card.append(this.back)
@@ -78,12 +80,6 @@ class Verb {
         return this.all.find(verb => verb.id == id); 
        
     }
-
-    // setFavoriteVerb = (e) => {
- 
-    //     console.log("Fave Btn - I was clicked")
-
-    // }
 
     static filterByTense(filteredTense){
 
@@ -112,12 +108,17 @@ class Verb {
 
     handleClick = (e) => {
 
-        console.log("I was clicked")
-    
+        if (e.target.innerText === "save"){
+            console.log("Save btn - I was clicked")
+            Verb.favorites.push(this.renderVerb())
+        
+        }
+
         if (e.target.innerText === "remove"){
             this.deleteVerb(e)
         }
     }
+
 
     deleteVerb = (e) => {
         this.card.remove()
@@ -126,6 +127,7 @@ class Verb {
 
     attachToDom(){
       Verb.container.appendChild(this.renderVerb())
+
     }
 }
 
