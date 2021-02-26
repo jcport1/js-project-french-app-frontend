@@ -5,6 +5,7 @@
 //then we'll have the ability to call get Tenses -> which makes fetch request to our base url
 
 class Adapter {
+
     constructor() {
         this.baseUrl = 
         'http://localhost:3000/verbs'

@@ -1,11 +1,8 @@
 class Verb {
 
     static all = [];
-
     static container = document.getElementById('flash-container')
-
     static favorites = []; 
-
 
     constructor(data) {
 
@@ -109,7 +106,7 @@ class Verb {
 
         if (e.target.innerText === "save"){
             console.log("Save btn - I was clicked")
-            Verb.favorites.push(this.renderVerb())
+            // Verb.favorites.push(this.renderVerb())
         
         }
 
@@ -130,8 +127,6 @@ class Verb {
     }
 
     attachToDomFaves(){
-
-        debugger
 
         Verb.container.appendChild(this)
 
