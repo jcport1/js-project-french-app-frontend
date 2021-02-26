@@ -46,7 +46,10 @@ class App {
 
             const container = document.getElementById('flash-container')
             container.innerHTML = ''
-            Verb.favorites 
+            debugger
+            Verb.favorites.forEach(verb =>{ 
+                verb.attachToDomFaves()
+            });
         
     
         }) 

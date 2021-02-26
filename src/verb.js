@@ -48,7 +48,6 @@ class Verb {
 
     }
 
-   
 
     renderVerb(){
 
@@ -127,6 +126,14 @@ class Verb {
 
     attachToDom(){
       Verb.container.appendChild(this.renderVerb())
+
+    }
+
+    attachToDomFaves(){
+
+        debugger
+
+        Verb.container.appendChild(this)
 
     }
 }
