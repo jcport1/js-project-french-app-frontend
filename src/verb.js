@@ -55,8 +55,8 @@ class Verb {
        <h3>${this.tense}</h3>
         <h1>${this.name}</h1>
         <h3>(${this.translation})</h3>
-        <button data-id=${this.id} class="favebtn">save</button>
         `
+        // <button data-id=${this.id} class="favebtn">save</button>
 
        this.back.innerHTML = `
        <h3>Je ${this.je}</h3>

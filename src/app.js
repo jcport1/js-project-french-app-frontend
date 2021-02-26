@@ -42,17 +42,19 @@ class App {
             }
         });
 
-        document.getElementById("fave-btn").addEventListener('click', () => {
+        // document.getElementById("fave-btn").addEventListener('click', () => {
 
-            const container = document.getElementById('flash-container')
-            container.innerHTML = ''
-            debugger
-            Verb.favorites.forEach(verb =>{ 
-                verb.attachToDomFaves()
-            });
+        //     const container = document.getElementById('flash-container')
+        //     container.innerHTML = ''
+        //     Verb.favorites.forEach(verb => {
+                
+        //         console.log(verb)
+
+        //         verb.attachToDomFaves()
+        //     });
         
     
-        }) 
+        // }) 
 
       
 
