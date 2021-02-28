@@ -24,7 +24,7 @@ Install:
 * open index.html
 
 Fork and clone [Rails API backend](https://github.com/jcport1/js-project-french-app-backend):
-* cd virtual-swap-backend
+* cd js-project-french-app-backend 
 * run bundle install
 * run rake db:migrate
 * run rails s
