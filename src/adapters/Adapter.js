@@ -51,6 +51,9 @@ class Adapter {
                 const i = new Verb({id: json.data.id, ...json.data.attributes})
                 i.attachToDom()
             })
+            .catch(function() {
+               console.log("Error - Please fill out out all fields")
+            });
 
     }
 

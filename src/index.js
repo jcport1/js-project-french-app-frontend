@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const ils = e.target.querySelector('#verb-ils').value
                 const tense = e.target.querySelector('#tense-dropdown').value
                 const bodyJSON = {name, translation, je, tu, il, nous, vous, ils, tense };
-                this.adapter.createVerb(bodyJSON)
+                new Adapter().createVerb(bodyJSON)
                 e.target.reset()
             })
          } else {
