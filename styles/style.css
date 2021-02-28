@@ -54,6 +54,12 @@ input[type=text], select {
 
 }
 
+.rules-container {
+
+  background: white; 
+
+}
+
 .form-container {
 
     border-radius: 5px;

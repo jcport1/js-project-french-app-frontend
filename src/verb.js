@@ -19,8 +19,6 @@ class Verb {
         this.tense = data.tense.name
 
         this.card = document.createElement("card")
-        // this.faveBtn = document.createElement('button')
-        // this.faveBtn.addEventListener("click", this.setFavoriteVerb)
         this.card.classList = 'card'
         this.card.dataset["id"] = data.id
         this.card.id = `verb-${data.id}`

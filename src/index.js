@@ -30,8 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     newVerbBtn.addEventListener('click', () => {
 
-        console.log("i was clicked")
-
         this.addVerb = !this.addVerb 
 
         if (this.addVerb) { 
@@ -51,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const ils = e.target.querySelector('#verb-ils').value
                 const tense = e.target.querySelector('#tense-dropdown').value
                 const bodyJSON = {name, translation, je, tu, il, nous, vous, ils, tense };
-                new Adapter().createVerb(bodyJSON)
+                this.adapter.createVerb(bodyJSON)
                 e.target.reset()
             })
          } else {
@@ -66,20 +64,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
         this.addRules = !this.addRules
 
-        if (this.addRules){
+        if (this.addRules) {
 
-            container.style.display = "block"
-            tenseContainer.style.display = "block"
+            container.style.display = "none"
+            tenseContainer.style.display = "none"
             rulesContainer.style.display = "block"
-            rulesBtn.innerText = "Show Verbs"
+            rulesBtn.innerText = "Go Back"
 
             console.log("im in the rules Btn callback function")
 
-        }
-            else {
+        } else {
 
-            container.style.display = "none";
-            tenseContainer.style.display = "none"
+            rulesContainer.style.display = "none"
+            container.style.display = "block";
+            tenseContainer.style.display = "block"
             rulesBtn.innerText = "Conjugation Rules"
 
         } 
