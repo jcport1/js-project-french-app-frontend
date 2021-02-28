@@ -53,7 +53,7 @@ class Verb {
         <h1>${this.name}</h1>
         <h3>(${this.translation})</h3>
         `
-        // <button data-id=${this.id} class="favebtn">save</button>
+       
 
        this.back.innerHTML = `
        <h3>Je ${this.je}</h3>
@@ -106,13 +106,14 @@ class Verb {
 
         if (e.target.innerText === "save"){
             console.log("Save btn - I was clicked")
-            // Verb.favorites.push(this.renderVerb())
+            new Adapter().createFavorite(this.id)
         
         }
 
         if (e.target.innerText === "remove"){
-            this.deleteVerb(e)
+            this.deleteVerb(e) 
         }
+
     }
 
 
@@ -126,10 +127,5 @@ class Verb {
 
     }
 
-    attachToDomFaves(){
-
-        Verb.container.appendChild(this)
-
-    }
 }
 

@@ -21,12 +21,10 @@ class Adapter {
         return fetch("http://localhost:3000/tenses").then(resp => resp.json())
     }
 
-    // //fetchFavorites() {
-    //     //return fetch("http://localhost:3000/favorites").then(resp => resp.json())
-    // }
 
 
-    createVerb(body) {
+    createVerb(body) { 
+
 
         return fetch("http://localhost:3000/verbs", {
             
@@ -45,7 +43,6 @@ class Adapter {
                     "vous": body.vous,
                     "ils": body.ils,
                     "tense_id": body.tense 
-
                 })
             })
             
@@ -55,18 +52,6 @@ class Adapter {
                 i.attachToDom()
             })
 
-    }
-
-    updateVerb(id,body) {
-
-        return fetch(`http://localhost:3000/verbs/${id}`, {
-                method: 'PATCH',
-                headers: {
-                    'Content-Type': 'application/json',
-                    Accept: 'application/json',
-                },
-                body: JSON.stringify(body)
-            }) .then(res => res.json())
     }
 
     deleteVerb(id) {

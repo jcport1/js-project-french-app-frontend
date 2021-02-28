@@ -4,9 +4,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const newVerbBtn = document.getElementById("new-verb-btn")
     const newVerbFormContainer = document.getElementById("new-flash-container")
     const newVerbForm = document.querySelector('#new-flashcard-form')
+    const container = document.getElementById('flash-container')
+    const rulesContainer = document.getElementById('rules-container')
+    const tenseContainer = document.getElementById('tenses-container') 
+    const rulesBtn = document.getElementById('rule-btn')
     addVerb = false;
-    
-    // app.attachEventListeners();
+    addRules = false; 
+
     
     app.adapter.fetchVerbs().then(json => { 
         json["data"].forEach(verb => {
@@ -22,8 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
             newTense.addToDropDown()
         });
     })
-
-    // app.adapter.fetchFavorites().then
 
 
     newVerbBtn.addEventListener('click', () => {
@@ -49,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const ils = e.target.querySelector('#verb-ils').value
                 const tense = e.target.querySelector('#tense-dropdown').value
                 const bodyJSON = {name, translation, je, tu, il, nous, vous, ils, tense };
-                this.adapter.createVerb(bodyJSON)
+                new Adapter().createVerb(bodyJSON)
                 e.target.reset()
             })
          } else {
@@ -60,4 +62,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-});
+    rulesBtn.addEventListener('click', () => {
+
+        this.addRules = !this.addRules
+
+        if (this.addRules){
+
+            container.style.display = "block"
+            tenseContainer.style.display = "block"
+            rulesContainer.style.display = "block"
+            rulesBtn.innerText = "Show Verbs"
+
+            console.log("im in the rules Btn callback function")
+
+        }
+            else {
+
+            container.style.display = "none";
+            tenseContainer.style.display = "none"
+            rulesBtn.innerText = "Conjugation Rules"
+
+        } 
+
+            })
+    
+        }); 

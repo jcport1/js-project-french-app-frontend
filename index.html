@@ -12,19 +12,13 @@
 <body>
     <div class="container">
 
-        <div class="header">
+        <div class="header"><h1>Frenchified</h1></div>
 
-            <h1>Frenchified</h1>
-           
-
-        </div>
-
-        
 
 
         <div class="form-container" id="new-flash-container" style="display: none;">
             <h2>Add New Flashcard</h2>
-        <form id="new-flashcard-form">
+            <form id="new-flashcard-form">
             <label for="verb-name">Verb</label>
             <input type="text" name="name" id="verb-name" value="" placeholder="..."/>
             <label for="verb-translation">Translation</label>
@@ -46,25 +40,31 @@
  
             </select><br><br>
             <input type="submit" name="submit" value="Create Flashcard"/>
-        </form>
+            </form>
         
-    </div>
+        </div>
         
-        <div class="tenses-container" id="tenses-container">
+        <div class="buttons-container" id="button-container"> 
 
             <p style='text-align:left' ><button id='new-verb-btn'class="button2">Add a new verb!</button></p>
-            <!-- <p style='text-align:left' ><button id='fave-btn'class="button2">Favorites</button></p> -->
+            <p style='text-align:left' ><button id='rule-btn'class="button2">Conjugation Rules</button></p>
 
         </div>
 
-        </div>
+        <div class="tenses-container" id="tenses-container"></div>
+
          
         <div class="flash-container" id="flash-container">
            <h2>Flashcards</h2>
 
         </div>
 
-        <div id='update'></div>
+        <div class="rules-container" id='rules-container' style="display: none;"> 
+            <h1>Peek-a-boo!</h1>
+        </div>
+
+
+    </div>
 
      
 
