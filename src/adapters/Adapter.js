@@ -53,6 +53,7 @@ class Adapter {
             })
             .catch(function() {
                console.log("Error - Please fill out out all fields")
+               alert("Error - Please fill out out all fields");
             });
 
     }
